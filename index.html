@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="date"></div>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		function formatDate(date) {
+			let monthNames = [
+    			"January", "February", "March",
+    			"April", "Мая", "Июня", "Июля",
+    			"August", "September", "October",
+    			"November", "December"
+  			];
+
+  			let now = date;
+  			now.setDate(now.getDate() + 3);
+
+  			return now.getDate() + monthNames[now.getMonth()];
+
+		}
+
+
+		console.log(formatDate(new Date()));
+		$('#date').html(formatDate(new Date()));
+	</script>
+	<!-- <script type="text/javascript" src="js.js"></script> -->
+</body>
+</html>
